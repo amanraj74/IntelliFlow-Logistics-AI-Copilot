@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ../..
+      dockerfile: infrastructure/docker/Dockerfile
+    command: python -m backend.api.main
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../../data:/app/data
+    environment:
+      - DEBUG=True
+      - DATA_PATH=/app/data/streams
+      - PATHWAY_CACHE=/app/cache/pathway_storage
+    networks:
+      - intelliflow
+
+  frontend:
+    build:
+      context: ../..
+      dockerfile: infrastructure/docker/Dockerfile
+    command: streamlit run frontend/dashboard.py
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend
+    environment:
+      - API_BASE=http://backend:8000
+    volumes:
+      - ../../data:/app/data
+    networks:
+      - intelliflow
+
+networks:
+  intelliflow:
+    driver: bridge

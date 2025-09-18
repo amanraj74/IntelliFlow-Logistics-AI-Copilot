@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.streamlit/
+.mypy_cache/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+logs/*.log
+cache/
+intelliflow_env/
+.env
+cache/pathway_storage/
+frontend/assets/images/logo.png
+
