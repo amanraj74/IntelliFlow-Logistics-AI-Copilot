@@ -10,3 +10,7 @@ scikit-learn==1.5.2
 python-dotenv==1.0.1
 sqlalchemy==2.0.35
 redis==5.0.8
+sentence-transformers>=2.2.2
+pytest>=7.0.0
+python-multipart
+aiofiles
