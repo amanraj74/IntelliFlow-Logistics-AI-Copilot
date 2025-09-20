@@ -385,12 +385,12 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 <div align="center">
 
-### **AMAN RAJ** 🚀
+### **AMAN JAISWAL** 🚀
 
-*GenAI Enthusiast | Full-Stack Developer | Hackathon Winner*
+*AI/ML Enthusiast | Full-Stack Developer | *
 
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/amanraj74)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/amanraj74)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aman-jaiswal-05b962212/)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:aerraj50@gmail.com)
 
 </div>
@@ -410,7 +410,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ---
 
-<sub>Made with ❤️ and ☕ for the **Pathway X Iota Cluster IIT Ropar Gen AI Hackathon 2024**</sub>
+<sub>Made with ❤️ and ☕ for the **Pathway X Iota Cluster IIT Ropar Gen AI Hackathon 2025**</sub>
 
 ⭐ **Star this repo if you found it helpful!** ⭐
 
