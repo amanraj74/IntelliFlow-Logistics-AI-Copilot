@@ -7,8 +7,8 @@ if exist ".streamlit\secrets.toml" del /f ".streamlit\secrets.toml"
 REM Create .streamlit directory if it doesn't exist
 if not exist ".streamlit" mkdir .streamlit
 
-REM Create new secrets file with proper encoding
-echo API_BASE = "http://localhost:8000" > .streamlit\secrets.toml
+REM Create new secrets file with proper UTF-8 encoding
+powershell -Command "'API_BASE = ""http://localhost:8000""' | Out-File -FilePath '.streamlit\secrets.toml' -Encoding utf8 -NoNewline"
 
 REM Create directories if they don't exist
 if not exist "data\streams\drivers" mkdir data\streams\drivers
