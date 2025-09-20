@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Hackathon Winner](https://img.shields.io/badge/Hackathon-Pathway%20×%20IIT%20Ropar-gold?style=for-the-badge)](https://github.com/amanraj74/intelliflow-logistics-ai)
+[![Hackathon Winner](https://img.shields.io/badge/Hackathon-Pathway%20×%20IIT%20Ropar-gold?style=for-the-badge)](https://github.com/amanraj74/IntelliFlow-Logistics-AI-Copilot)
 [![Python](https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-009485?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com)
 [![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit)](https://streamlit.io)
