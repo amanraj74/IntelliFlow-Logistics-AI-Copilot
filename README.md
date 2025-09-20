@@ -12,7 +12,7 @@
 
 *Built for the Pathway X Iota Cluster IIT Ropar Gen AI Hackathon 2024*
 
-[🚀 Quick Start](#quick-start) • [🎯 Features](#key-features) • [📖 Documentation](#documentation) • [🎥 Demo](#demo)
+**[🚀 Quick Start](#-quick-start) • [🎯 Key Features](#-key-features) • [📖 Documentation](#-documentation) • [🎥 Demo](#-demo) • [🏆 Hackathon](#-hackathon-achievements)**
 
 </div>
 
@@ -58,22 +58,22 @@ IntelliFlow Logistics AI Copilot revolutionizes logistics operations through **r
 
 <div align="center">
 
-```mermaid
 graph TB
-    A[Data Sources] --> B[Pathway Streaming]
-    B --> C[RAG Pipeline]
-    C --> D[FastAPI Backend]
-    D --> E[Streamlit Dashboard]
-    
-    B --> F[Anomaly Detection]
-    B --> G[Risk Scoring]
-    F --> H[Alert Generation]
-    G --> H
-    
-    I[Vector Database] <--> C
-    J[ML Models] <--> F
-    K[Real-time Index] <--> C
-```
+A[Data Sources] --> B[Pathway Streaming]
+B --> C[RAG Pipeline]
+C --> D[FastAPI Backend]
+D --> E[Streamlit Dashboard]
+
+text
+B --> F[Anomaly Detection]
+B --> G[Risk Scoring]
+F --> H[Alert Generation]
+G --> H
+
+I[Vector Database] <--> C
+J[ML Models] <--> F
+K[Real-time Index] <--> C
+text
 
 </div>
 
@@ -102,62 +102,65 @@ graph TB
 ### ⚡ Installation
 
 1. **Clone the repository**
-   ```bash
-   git clone https://github.com/amanraj74/intelliflow-logistics-ai.git
-   cd intelliflow-logistics-ai
-   ```
+git clone https://github.com/amanraj74/IntelliFlow-Logistics-AI-Copilot.git
+cd IntelliFlow-Logistics-AI-Copilot
+
+text
 
 2. **Set up environment**
-   ```bash
-   python -m venv intelliflow_env
-   # Windows
-   .\intelliflow_env\Scripts\activate
-   # macOS/Linux  
-   source intelliflow_env/bin/activate
-   ```
+python -m venv intelliflow_env
+
+Windows
+.\intelliflow_env\Scripts\activate
+
+macOS/Linux
+source intelliflow_env/bin/activate
+
+text
 
 3. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+pip install -r requirements.txt
+
+text
 
 4. **Configure settings**
-   ```bash
-   cp .env.example .env
-   mkdir -p .streamlit
-   echo "API_BASE = 'http://localhost:8000'" > .streamlit/secrets.toml
-   ```
+cp .env.example .env
+mkdir -p .streamlit
+echo "API_BASE = 'http://localhost:8000'" > .streamlit/secrets.toml
+
+text
 
 ### 🏃‍♂️ Running the Application
 
 **Option 1: Quick Start (Windows)**
-```bash
 run-windows.bat
-```
+
+text
 
 **Option 2: Manual Start**
-```bash
-# Terminal 1: Start Backend
+Terminal 1: Start Backend
 python -m backend.api.main
 
-# Terminal 2: Start Frontend  
+Terminal 2: Start Frontend
 streamlit run frontend/dashboard.py
-```
+
+text
 
 **Option 3: Docker**
-```bash
 cd infrastructure/docker
 docker-compose up
-```
+
+text
 
 ---
 
 ## 🎥 Demo
 
 ### 📱 Interactive Dashboard
-```bash
 streamlit run frontend/dashboard.py
-```
+
+text
+**Access**: http://localhost:8501
 
 ### 🤖 AI Copilot Queries
 Ask questions like:
@@ -174,97 +177,95 @@ Ask questions like:
 
 ---
 
-## 📁 Project Structure
+## 📖 Documentation
 
-```
+### 📁 Project Structure
 intelliflow-logistics-ai/
-├── 🚀 backend/                 # Core application logic (24 Python files)
-│   ├── api/
-│   │   ├── main.py            # FastAPI application entry point
-│   │   └── routers/           # API route handlers
-│   │       ├── ai_query.py    # AI copilot endpoints
-│   │       ├── alerts.py      # Alert management
-│   │       ├── drivers.py     # Driver operations
-│   │       └── incidents.py   # Incident tracking
-│   ├── analytics/
-│   │   └── shipment_anomaly_detector.py  # Core anomaly detection system
-│   ├── pathway/               # Real-time streaming pipelines
-│   │   ├── main_pipeline.py   # Main data processing pipeline
-│   │   ├── connectors/        # Data input connectors
-│   │   └── processors/        # Stream processing logic
-│   ├── pipelines/
-│   │   └── shipment_pipeline.py  # Shipment processing pipeline
-│   └── rag/
-│       └── logistics_rag_pipeline.py  # RAG system implementation
-├── 🎨 frontend/                # Streamlit dashboard (16 Python files)
-│   ├── dashboard.py           # Main dashboard application
-│   ├── components/            # Reusable UI components
-│   │   ├── ai_chat.py        # AI chat interface
-│   │   ├── alerts.py         # Alert displays
-│   │   ├── charts.py         # Data visualizations
-│   │   ├── metrics_cards.py  # KPI cards
-│   │   └── tables.py         # Data tables
-│   ├── pages/                # Multi-page navigation
-│   │   ├── analytics.py      # Analytics page
-│   │   ├── compliance.py     # Compliance dashboard
-│   │   ├── drivers.py        # Driver management
-│   │   └── shipments.py      # Shipment tracking
-│   └── utils/                # Frontend utilities
-├── 📊 data/                   # Data management
-│   ├── data_validator.py     # Data validation utilities
-│   ├── enterprise_generator.py  # Enterprise data generation
-│   ├── streams/              # Live data input directory
-│   ├── processed/            # Output data storage
-│   └── schemas/              # Data structure definitions
-├── ⚙️ config/                 # Configuration management
-│   ├── settings.py           # Main settings
-│   ├── development.py        # Dev environment config
-│   ├── production.py         # Production config
-│   └── docker.py             # Docker configuration
-├── 📜 scripts/                # Utility & demo scripts
-│   ├── generate_data.py      # Sample data generation
-│   ├── demo_shipment_anomalies.py  # Demo anomaly detection
-│   └── health_check.py       # System health monitoring
-├── 🧪 tests/                  # Comprehensive test suite
-│   ├── unit/                 # Unit tests
-│   ├── integration/          # Integration tests
-│   └── load/                 # Performance tests
-├── 🏗️ infrastructure/        # Deployment configurations
-│   ├── docker/               # Docker containers
-│   └── kubernetes/           # K8s deployment files
-├── 📖 docs/                   # Documentation
-├── 🛠️ utils/                  # Project utilities
-│   └── data_generator.py     # Data generation helpers
-├── 📄 README.md              # Project documentation
-├── 📄 requirements.txt       # Python dependencies
-├── 📄 docker-compose.yml     # Multi-container setup
-```
+├── 🚀 backend/ # Core application logic (24 Python files)
+│ ├── api/
+│ │ ├── main.py # FastAPI application entry point
+│ │ └── routers/ # API route handlers
+│ │ ├── ai_query.py # AI copilot endpoints
+│ │ ├── alerts.py # Alert management
+│ │ ├── drivers.py # Driver operations
+│ │ └── incidents.py # Incident tracking
+│ ├── analytics/
+│ │ └── shipment_anomaly_detector.py # Core anomaly detection system
+│ ├── pathway/ # Real-time streaming pipelines
+│ │ ├── main_pipeline.py # Main data processing pipeline
+│ │ ├── connectors/ # Data input connectors
+│ │ └── processors/ # Stream processing logic
+│ ├── pipelines/
+│ │ └── shipment_pipeline.py # Shipment processing pipeline
+│ └── rag/
+│ └── logistics_rag_pipeline.py # RAG system implementation
+├── 🎨 frontend/ # Streamlit dashboard (16 Python files)
+│ ├── dashboard.py # Main dashboard application
+│ ├── components/ # Reusable UI components
+│ │ ├── ai_chat.py # AI chat interface
+│ │ ├── alerts.py # Alert displays
+│ │ ├── charts.py # Data visualizations
+│ │ ├── metrics_cards.py # KPI cards
+│ │ └── tables.py # Data tables
+│ ├── pages/ # Multi-page navigation
+│ │ ├── analytics.py # Analytics page
+│ │ ├── compliance.py # Compliance dashboard
+│ │ ├── drivers.py # Driver management
+│ │ └── shipments.py # Shipment tracking
+│ └── utils/ # Frontend utilities
+├── 📊 data/ # Data management
+│ ├── data_validator.py # Data validation utilities
+│ ├── enterprise_generator.py # Enterprise data generation
+│ ├── streams/ # Live data input directory
+│ ├── processed/ # Output data storage
+│ └── schemas/ # Data structure definitions
+├── ⚙️ config/ # Configuration management
+│ ├── settings.py # Main settings
+│ ├── development.py # Dev environment config
+│ ├── production.py # Production config
+│ └── docker.py # Docker configuration
+├── 📜 scripts/ # Utility & demo scripts
+│ ├── generate_data.py # Sample data generation
+│ ├── demo_shipment_anomalies.py # Demo anomaly detection
+│ └── health_check.py # System health monitoring
+├── 🧪 tests/ # Comprehensive test suite
+│ ├── unit/ # Unit tests
+│ ├── integration/ # Integration tests
+│ └── load/ # Performance tests
+├── 🏗️ infrastructure/ # Deployment configurations
+│ ├── docker/ # Docker containers
+│ └── kubernetes/ # K8s deployment files
+├── 📖 docs/ # Documentation
+├── 🛠️ utils/ # Project utilities
+│ └── data_generator.py # Data generation helpers
+├── 📄 README.md # Project documentation
+├── 📄 requirements.txt # Python dependencies
+├── 📄 docker-compose.yml # Multi-container setup
 
----
+text
 
-## 🔧 Configuration
+### 🔧 Configuration
 
-### Environment Variables
-```env
-# API Configuration
+#### Environment Variables
+API Configuration
 API_PORT=8000
 DEBUG=True
 LOG_LEVEL=INFO
 
-# Data Processing
+Data Processing
 DATA_PATH=./data/streams
 PATHWAY_CACHE=./cache/pathway_storage
 BATCH_SIZE=1000
 
-# AI/ML Settings
+AI/ML Settings
 EMBEDDING_MODEL=all-MiniLM-L6-v2
 MAX_TOKENS=4096
 TEMPERATURE=0.0
-```
 
-### Streamlit Configuration
-```toml
-# .streamlit/config.toml
+text
+
+#### Streamlit Configuration
+.streamlit/config.toml
 [theme]
 primaryColor = "#FF6B35"
 backgroundColor = "#FFFFFF"
@@ -274,35 +275,36 @@ textColor = "#262730"
 [server]
 port = 8501
 enableCORS = false
-```
+
+text
 
 ---
 
 ## 🧪 Testing & Quality
 
 ### Run Tests
-```bash
-# All tests
+All tests
 pytest
 
-# Specific categories
+Specific categories
 pytest tests/unit/ -v
 pytest tests/integration/ -v
 pytest tests/e2e/ -v
 
-# Coverage report
+Coverage report
 pytest --cov=backend --cov-report=html
-```
+
+text
 
 ### Code Quality
-```bash
-# Linting
+Linting
 flake8 backend/ frontend/
 black backend/ frontend/
 
-# Type checking
+Type checking
 mypy backend/
-```
+
+text
 
 ---
 
@@ -363,8 +365,8 @@ mypy backend/
 We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
 ### 🐛 Issues & Features
-- 🐛 [Report Bug](https://github.com/amanraj74/intelliflow-logistics-ai/issues/new?template=bug_report.md)
-- 💡 [Request Feature](https://github.com/amanraj74/intelliflow-logistics-ai/issues/new?template=feature_request.md)
+- 🐛 [Report Bug](https://github.com/amanraj74/IntelliFlow-Logistics-AI-Copilot/issues/new?template=bug_report.md)
+- 💡 [Request Feature](https://github.com/amanraj74/IntelliFlow-Logistics-AI-Copilot/issues/new?template=feature_request.md)
 
 ### 🔀 Pull Requests
 1. Fork the repository
@@ -387,7 +389,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ### **AMAN JAISWAL** 🚀
 
-*AI/ML Enthusiast | Full-Stack Developer | *
+*AI/ML Enthusiast | Full-Stack Developer*
 
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/amanraj74)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aman-jaiswal-05b962212/)
@@ -410,7 +412,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ---
 
-<sub>Made with ❤️ and ☕ for the **Pathway X Iota Cluster IIT Ropar Gen AI Hackathon 2025**</sub>
+<sub>Made with ❤️ and ☕ for the **Pathway X Iota Cluster IIT Ropar Gen AI Hackathon 2024**</sub>
 
 ⭐ **Star this repo if you found it helpful!** ⭐
 
