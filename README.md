@@ -408,7 +408,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ---
 
-<sub>Made with ❤️ and ☕ for the **Pathway X Iota Cluster IIT Ropar Gen AI Hackathon 2024**</sub>
+<sub>Made with ❤️ and ☕ for the **Pathway X Iota Cluster IIT Ropar Gen AI Hackathon 2025**</sub>
 
 ⭐ **Star this repo if you found it helpful!** ⭐
 
