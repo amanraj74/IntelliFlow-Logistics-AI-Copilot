@@ -1,0 +1,136 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Vehicle Schema",
+  "description": "Schema for vehicle data in the logistics system",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the vehicle"
+    },
+    "type": {
+      "type": "string",
+      "description": "Type of vehicle (e.g., truck, van, car)",
+      "enum": ["truck", "van", "car", "semi", "trailer", "other"]
+    },
+    "make": {
+      "type": "string",
+      "description": "Vehicle manufacturer"
+    },
+    "model": {
+      "type": "string",
+      "description": "Vehicle model"
+    },
+    "year": {
+      "type": "integer",
+      "description": "Year of manufacture",
+      "minimum": 1900
+    },
+    "license_plate": {
+      "type": "string",
+      "description": "Vehicle license plate number"
+    },
+    "vin": {
+      "type": "string",
+      "description": "Vehicle Identification Number"
+    },
+    "status": {
+      "type": "string",
+      "description": "Current status of the vehicle",
+      "enum": ["active", "maintenance", "repair", "retired", "assigned"]
+    },
+    "current_driver_id": {
+      "type": "string",
+      "description": "ID of the driver currently assigned to this vehicle (if any)"
+    },
+    "capacity": {
+      "type": "number",
+      "description": "Cargo capacity in cubic meters",
+      "minimum": 0
+    },
+    "max_weight": {
+      "type": "number",
+      "description": "Maximum cargo weight in kilograms",
+      "minimum": 0
+    },
+    "fuel_type": {
+      "type": "string",
+      "description": "Type of fuel used",
+      "enum": ["diesel", "gasoline", "electric", "hybrid", "natural_gas", "other"]
+    },
+    "fuel_efficiency": {
+      "type": "number",
+      "description": "Fuel efficiency in miles per gallon or kWh per mile",
+      "minimum": 0
+    },
+    "maintenance_history": {
+      "type": "array",
+      "description": "History of maintenance events",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Date of maintenance"
+          },
+          "type": {
+            "type": "string",
+            "description": "Type of maintenance",
+            "enum": ["routine", "repair", "inspection", "other"]
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of maintenance performed"
+          },
+          "cost": {
+            "type": "number",
+            "description": "Cost of maintenance",
+            "minimum": 0
+          }
+        },
+        "required": ["date", "type", "description"]
+      }
+    },
+    "last_inspection_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date of last inspection"
+    },
+    "next_inspection_due": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date when next inspection is due"
+    },
+    "gps_device_id": {
+      "type": "string",
+      "description": "ID of the GPS tracking device installed in the vehicle"
+    },
+    "last_location": {
+      "type": "object",
+      "description": "Last known location of the vehicle",
+      "properties": {
+        "latitude": {
+          "type": "number",
+          "description": "Latitude coordinate"
+        },
+        "longitude": {
+          "type": "number",
+          "description": "Longitude coordinate"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Time when location was recorded"
+        }
+      },
+      "required": ["latitude", "longitude", "timestamp"]
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of the last update to this record"
+    }
+  },
+  "required": ["id", "type", "status"]
+}

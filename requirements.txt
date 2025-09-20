@@ -10,6 +10,8 @@ python-dotenv==1.0.1
 pytest>=7.0.0
 python-multipart
 aiofiles
+geopy>=2.2.0
+folium>=0.12.0
 
 # Optional: Install these only if you want ML features
 # sentence-transformers>=2.2.2  # Requires PyTorch

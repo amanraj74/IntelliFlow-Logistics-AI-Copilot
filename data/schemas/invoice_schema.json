@@ -1,0 +1,116 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Invoice Schema",
+  "description": "Schema for invoice data in the logistics system",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the invoice"
+    },
+    "order_id": {
+      "type": "string",
+      "description": "Associated order identifier"
+    },
+    "customer_id": {
+      "type": "string",
+      "description": "Customer identifier"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Total invoice amount",
+      "minimum": 0
+    },
+    "currency": {
+      "type": "string",
+      "description": "Currency code (e.g., USD, EUR)",
+      "default": "USD"
+    },
+    "issue_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date when the invoice was issued"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date when the invoice payment is due"
+    },
+    "payment_terms": {
+      "type": "string",
+      "description": "Payment terms (e.g., Net 30, Net 60)"
+    },
+    "early_payment_discount": {
+      "type": "number",
+      "description": "Discount percentage for early payment",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "late_payment_fee": {
+      "type": "number",
+      "description": "Fee percentage for late payment",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "issued", "paid", "overdue", "cancelled", "disputed"],
+      "description": "Current status of the invoice"
+    },
+    "payment_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date when the invoice was paid (if applicable)"
+    },
+    "payment_method": {
+      "type": "string",
+      "description": "Method used for payment (if applicable)"
+    },
+    "line_items": {
+      "type": "array",
+      "description": "Individual line items on the invoice",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "description": "Description of the item"
+          },
+          "quantity": {
+            "type": "number",
+            "description": "Quantity of the item",
+            "minimum": 0
+          },
+          "unit_price": {
+            "type": "number",
+            "description": "Price per unit",
+            "minimum": 0
+          },
+          "amount": {
+            "type": "number",
+            "description": "Total amount for this line item",
+            "minimum": 0
+          }
+        },
+        "required": ["description", "quantity", "unit_price", "amount"]
+      }
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes or comments"
+    },
+    "compliance_flags": {
+      "type": "array",
+      "description": "Flags indicating compliance issues",
+      "items": {
+        "type": "string"
+      }
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of the last update to this record"
+    }
+  },
+  "required": ["id", "amount", "issue_date", "due_date", "status"]
+}

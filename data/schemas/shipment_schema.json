@@ -1,0 +1,304 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Shipment Schema",
+  "description": "Schema for shipment data in the logistics system",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the shipment"
+    },
+    "order_id": {
+      "type": "string",
+      "description": "Associated order identifier"
+    },
+    "customer_id": {
+      "type": "string",
+      "description": "Customer identifier"
+    },
+    "driver_id": {
+      "type": "string",
+      "description": "ID of the driver assigned to this shipment"
+    },
+    "vehicle_id": {
+      "type": "string",
+      "description": "ID of the vehicle assigned to this shipment"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "in_transit", "delivered", "delayed", "cancelled"],
+      "description": "Current status of the shipment"
+    },
+    "origin": {
+      "type": "object",
+      "description": "Origin location details",
+      "properties": {
+        "address": {
+          "type": "string",
+          "description": "Full address of origin"
+        },
+        "city": {
+          "type": "string",
+          "description": "City of origin"
+        },
+        "state": {
+          "type": "string",
+          "description": "State/province of origin"
+        },
+        "country": {
+          "type": "string",
+          "description": "Country of origin"
+        },
+        "zip_code": {
+          "type": "string",
+          "description": "ZIP/Postal code of origin"
+        },
+        "coordinates": {
+          "type": "object",
+          "description": "GPS coordinates of origin",
+          "properties": {
+            "latitude": {
+              "type": "number",
+              "description": "Latitude coordinate"
+            },
+            "longitude": {
+              "type": "number",
+              "description": "Longitude coordinate"
+            }
+          },
+          "required": ["latitude", "longitude"]
+        }
+      },
+      "required": ["address", "city", "state", "country"]
+    },
+    "destination": {
+      "type": "object",
+      "description": "Destination location details",
+      "properties": {
+        "address": {
+          "type": "string",
+          "description": "Full address of destination"
+        },
+        "city": {
+          "type": "string",
+          "description": "City of destination"
+        },
+        "state": {
+          "type": "string",
+          "description": "State/province of destination"
+        },
+        "country": {
+          "type": "string",
+          "description": "Country of destination"
+        },
+        "zip_code": {
+          "type": "string",
+          "description": "ZIP/Postal code of destination"
+        },
+        "coordinates": {
+          "type": "object",
+          "description": "GPS coordinates of destination",
+          "properties": {
+            "latitude": {
+              "type": "number",
+              "description": "Latitude coordinate"
+            },
+            "longitude": {
+              "type": "number",
+              "description": "Longitude coordinate"
+            }
+          },
+          "required": ["latitude", "longitude"]
+        }
+      },
+      "required": ["address", "city", "state", "country"]
+    },
+    "planned_route": {
+      "type": "array",
+      "description": "Planned route waypoints",
+      "items": {
+        "type": "object",
+        "properties": {
+          "latitude": {
+            "type": "number",
+            "description": "Latitude coordinate"
+          },
+          "longitude": {
+            "type": "number",
+            "description": "Longitude coordinate"
+          },
+          "name": {
+            "type": "string",
+            "description": "Waypoint name or description"
+          }
+        },
+        "required": ["latitude", "longitude"]
+      }
+    },
+    "actual_route": {
+      "type": "array",
+      "description": "Actual route taken (GPS tracking points)",
+      "items": {
+        "type": "object",
+        "properties": {
+          "latitude": {
+            "type": "number",
+            "description": "Latitude coordinate"
+          },
+          "longitude": {
+            "type": "number",
+            "description": "Longitude coordinate"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Time when this location was recorded"
+          },
+          "speed": {
+            "type": "number",
+            "description": "Speed in km/h at this point"
+          }
+        },
+        "required": ["latitude", "longitude", "timestamp"]
+      }
+    },
+    "departure_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Actual departure time"
+    },
+    "estimated_arrival_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Estimated arrival time"
+    },
+    "actual_arrival_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Actual arrival time (if delivered)"
+    },
+    "cargo": {
+      "type": "object",
+      "description": "Cargo details",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Type of cargo"
+        },
+        "weight": {
+          "type": "number",
+          "description": "Weight in kg",
+          "minimum": 0
+        },
+        "volume": {
+          "type": "number",
+          "description": "Volume in cubic meters",
+          "minimum": 0
+        },
+        "value": {
+          "type": "number",
+          "description": "Declared value of cargo",
+          "minimum": 0
+        },
+        "hazardous": {
+          "type": "boolean",
+          "description": "Whether the cargo contains hazardous materials"
+        },
+        "temperature_controlled": {
+          "type": "boolean",
+          "description": "Whether the cargo requires temperature control"
+        },
+        "temperature_range": {
+          "type": "object",
+          "description": "Required temperature range (if temperature controlled)",
+          "properties": {
+            "min": {
+              "type": "number",
+              "description": "Minimum temperature in Celsius"
+            },
+            "max": {
+              "type": "number",
+              "description": "Maximum temperature in Celsius"
+            }
+          }
+        }
+      },
+      "required": ["type", "weight"]
+    },
+    "anomalies": {
+      "type": "array",
+      "description": "Detected anomalies for this shipment",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["route_deviation", "delay", "temperature_breach", "unusual_stop", "speed_violation", "potential_fraud", "other"],
+            "description": "Type of anomaly"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the anomaly"
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["low", "medium", "high"],
+            "description": "Severity level of the anomaly"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "When the anomaly was detected"
+          },
+          "location": {
+            "type": "object",
+            "description": "Location where the anomaly occurred",
+            "properties": {
+              "latitude": {
+                "type": "number",
+                "description": "Latitude coordinate"
+              },
+              "longitude": {
+                "type": "number",
+                "description": "Longitude coordinate"
+              },
+              "address": {
+                "type": "string",
+                "description": "Address or description of location"
+              }
+            }
+          },
+          "resolved": {
+            "type": "boolean",
+            "description": "Whether the anomaly has been resolved"
+          },
+          "resolution_notes": {
+            "type": "string",
+            "description": "Notes on how the anomaly was resolved"
+          }
+        },
+        "required": ["type", "description", "severity", "timestamp"]
+      }
+    },
+    "cost": {
+      "type": "number",
+      "description": "Total cost of the shipment",
+      "minimum": 0
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes or comments"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the shipment record was created"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the shipment record was last updated"
+    }
+  },
+  "required": ["id", "status", "origin", "destination", "created_at"]
+}

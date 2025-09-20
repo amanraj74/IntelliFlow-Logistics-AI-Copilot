@@ -1,0 +1,429 @@
+[
+  {
+    "id": "SH0001",
+    "status": "delayed",
+    "origin": "Dallas, TX",
+    "destination": "Chicago, IL",
+    "cargo": {},
+    "driver_id": "D014",
+    "vehicle_id": "V016",
+    "route_points": [],
+    "expected_delivery": "",
+    "actual_delivery": NaN,
+    "anomalies": [
+      {
+        "type": "delay",
+        "description": "Shipment is delayed beyond expected delivery time",
+        "severity": "medium",
+        "timestamp": "",
+        "resolved": false
+      },
+      {
+        "type": "route_deviation",
+        "description": "Shipment route deviates from optimal path",
+        "severity": "low",
+        "timestamp": "",
+        "resolved": false
+      }
+    ],
+    "created_at": "2025-08-25T11:32:38.480561",
+    "updated_at": "",
+    "anomaly_count": 2,
+    "has_high_severity_anomalies": false
+  },
+  {
+    "id": "SH0002",
+    "status": "cancelled",
+    "origin": "Austin, TX",
+    "destination": "Boston, MA",
+    "cargo": {},
+    "driver_id": "D005",
+    "vehicle_id": "V004",
+    "route_points": [],
+    "expected_delivery": "",
+    "actual_delivery": NaN,
+    "anomalies": [
+      {
+        "type": "route_deviation",
+        "description": "Shipment route deviates from optimal path",
+        "severity": "low",
+        "timestamp": "",
+        "resolved": false
+      }
+    ],
+    "created_at": "2025-08-21T11:32:38.480561",
+    "updated_at": "",
+    "anomaly_count": 1,
+    "has_high_severity_anomalies": false
+  },
+  {
+    "id": "SH0003",
+    "status": "scheduled",
+    "origin": "Houston, TX",
+    "destination": "Philadelphia, PA",
+    "cargo": {},
+    "driver_id": "D014",
+    "vehicle_id": "V020",
+    "route_points": [],
+    "expected_delivery": "",
+    "actual_delivery": NaN,
+    "anomalies": [
+      {
+        "type": "route_deviation",
+        "description": "Shipment route deviates from optimal path",
+        "severity": "low",
+        "timestamp": "",
+        "resolved": false
+      }
+    ],
+    "created_at": "2025-09-13T11:32:38.480561",
+    "updated_at": "",
+    "anomaly_count": 1,
+    "has_high_severity_anomalies": false
+  },
+  {
+    "id": "SH0004",
+    "status": "scheduled",
+    "origin": "San Antonio, TX",
+    "destination": "Denver, CO",
+    "cargo": {},
+    "driver_id": "D012",
+    "vehicle_id": "V004",
+    "route_points": [],
+    "expected_delivery": "",
+    "actual_delivery": NaN,
+    "anomalies": [
+      {
+        "type": "route_deviation",
+        "description": "Shipment route deviates from optimal path",
+        "severity": "low",
+        "timestamp": "",
+        "resolved": false
+      }
+    ],
+    "created_at": "2025-09-14T11:32:38.480561",
+    "updated_at": "",
+    "anomaly_count": 1,
+    "has_high_severity_anomalies": false
+  },
+  {
+    "id": "SH0005",
+    "status": "delivered",
+    "origin": "Seattle, WA",
+    "destination": "Philadelphia, PA",
+    "cargo": {},
+    "driver_id": "D002",
+    "vehicle_id": "V014",
+    "route_points": [],
+    "expected_delivery": "",
+    "actual_delivery": "2025-09-15T11:32:38.481560",
+    "anomalies": [],
+    "created_at": "2025-09-04T11:32:38.481560",
+    "updated_at": "",
+    "anomaly_count": 0,
+    "has_high_severity_anomalies": false
+  },
+  {
+    "id": "SH0006",
+    "status": "delivered",
+    "origin": "New York, NY",
+    "destination": "Fort Worth, TX",
+    "cargo": {},
+    "driver_id": "D007",
+    "vehicle_id": "V016",
+    "route_points": [],
+    "expected_delivery": "",
+    "actual_delivery": "2025-08-31T11:32:38.481560",
+    "anomalies": [],
+    "created_at": "2025-08-29T11:32:38.481560",
+    "updated_at": "",
+    "anomaly_count": 0,
+    "has_high_severity_anomalies": false
+  },
+  {
+    "id": "SH0007",
+    "status": "cancelled",
+    "origin": "San Francisco, CA",
+    "destination": "Houston, TX",
+    "cargo": {},
+    "driver_id": "D006",
+    "vehicle_id": "V002",
+    "route_points": [],
+    "expected_delivery": "",
+    "actual_delivery": NaN,
+    "anomalies": [],
+    "created_at": "2025-08-28T11:32:38.481560",
+    "updated_at": "",
+    "anomaly_count": 0,
+    "has_high_severity_anomalies": false
+  },
+  {
+    "id": "SH0008",
+    "status": "delayed",
+    "origin": "Los Angeles, CA",
+    "destination": "Jacksonville, FL",
+    "cargo": {},
+    "driver_id": "D011",
+    "vehicle_id": "V008",
+    "route_points": [],
+    "expected_delivery": "",
+    "actual_delivery": NaN,
+    "anomalies": [
+      {
+        "type": "delay",
+        "description": "Shipment is delayed beyond expected delivery time",
+        "severity": "medium",
+        "timestamp": "",
+        "resolved": false
+      }
+    ],
+    "created_at": "2025-08-27T11:32:38.481560",
+    "updated_at": "",
+    "anomaly_count": 1,
+    "has_high_severity_anomalies": false
+  },
+  {
+    "id": "SH0009",
+    "status": "cancelled",
+    "origin": "Indianapolis, IN",
+    "destination": "Charlotte, NC",
+    "cargo": {},
+    "driver_id": "D013",
+    "vehicle_id": "V001",
+    "route_points": [],
+    "expected_delivery": "",
+    "actual_delivery": NaN,
+    "anomalies": [],
+    "created_at": "2025-09-12T11:32:38.481560",
+    "updated_at": "",
+    "anomaly_count": 0,
+    "has_high_severity_anomalies": false
+  },
+  {
+    "id": "SH0010",
+    "status": "cancelled",
+    "origin": "San Diego, CA",
+    "destination": "Philadelphia, PA",
+    "cargo": {},
+    "driver_id": "D016",
+    "vehicle_id": "V017",
+    "route_points": [],
+    "expected_delivery": "",
+    "actual_delivery": NaN,
+    "anomalies": [],
+    "created_at": "2025-09-04T11:32:38.481560",
+    "updated_at": "",
+    "anomaly_count": 0,
+    "has_high_severity_anomalies": false
+  },
+  {
+    "id": "SH0011",
+    "status": "in_transit",
+    "origin": "Philadelphia, PA",
+    "destination": "Houston, TX",
+    "cargo": {},
+    "driver_id": "D016",
+    "vehicle_id": "V014",
+    "route_points": [],
+    "expected_delivery": "",
+    "actual_delivery": NaN,
+    "anomalies": [
+      {
+        "type": "route_deviation",
+        "description": "Shipment route deviates from optimal path",
+        "severity": "low",
+        "timestamp": "",
+        "resolved": false
+      }
+    ],
+    "created_at": "2025-08-30T11:32:38.481560",
+    "updated_at": "",
+    "anomaly_count": 1,
+    "has_high_severity_anomalies": false
+  },
+  {
+    "id": "SH0012",
+    "status": "scheduled",
+    "origin": "San Jose, CA",
+    "destination": "Houston, TX",
+    "cargo": {},
+    "driver_id": "D005",
+    "vehicle_id": "V014",
+    "route_points": [],
+    "expected_delivery": "",
+    "actual_delivery": NaN,
+    "anomalies": [
+      {
+        "type": "route_deviation",
+        "description": "Shipment route deviates from optimal path",
+        "severity": "low",
+        "timestamp": "",
+        "resolved": false
+      }
+    ],
+    "created_at": "2025-09-12T11:32:38.481560",
+    "updated_at": "",
+    "anomaly_count": 1,
+    "has_high_severity_anomalies": false
+  },
+  {
+    "id": "SH0013",
+    "status": "in_transit",
+    "origin": "Boston, MA",
+    "destination": "Austin, TX",
+    "cargo": {},
+    "driver_id": "D010",
+    "vehicle_id": "V008",
+    "route_points": [],
+    "expected_delivery": "",
+    "actual_delivery": NaN,
+    "anomalies": [
+      {
+        "type": "route_deviation",
+        "description": "Shipment route deviates from optimal path",
+        "severity": "low",
+        "timestamp": "",
+        "resolved": false
+      }
+    ],
+    "created_at": "2025-09-11T11:32:38.482130",
+    "updated_at": "",
+    "anomaly_count": 1,
+    "has_high_severity_anomalies": false
+  },
+  {
+    "id": "SH0014",
+    "status": "delivered",
+    "origin": "Los Angeles, CA",
+    "destination": "Phoenix, AZ",
+    "cargo": {},
+    "driver_id": "D019",
+    "vehicle_id": "V020",
+    "route_points": [],
+    "expected_delivery": "",
+    "actual_delivery": "2025-09-18T11:32:38.482212",
+    "anomalies": [
+      {
+        "type": "route_deviation",
+        "description": "Shipment route deviates from optimal path",
+        "severity": "low",
+        "timestamp": "",
+        "resolved": false
+      }
+    ],
+    "created_at": "2025-09-12T11:32:38.482212",
+    "updated_at": "",
+    "anomaly_count": 1,
+    "has_high_severity_anomalies": false
+  },
+  {
+    "id": "SH0015",
+    "status": "scheduled",
+    "origin": "Columbus, OH",
+    "destination": "Seattle, WA",
+    "cargo": {},
+    "driver_id": "D015",
+    "vehicle_id": "V015",
+    "route_points": [],
+    "expected_delivery": "",
+    "actual_delivery": NaN,
+    "anomalies": [],
+    "created_at": "2025-09-04T11:32:38.482212",
+    "updated_at": "",
+    "anomaly_count": 0,
+    "has_high_severity_anomalies": false
+  },
+  {
+    "id": "SH0016",
+    "status": "delivered",
+    "origin": "Houston, TX",
+    "destination": "Indianapolis, IN",
+    "cargo": {},
+    "driver_id": "D015",
+    "vehicle_id": "V006",
+    "route_points": [],
+    "expected_delivery": "",
+    "actual_delivery": "2025-09-18T11:32:38.482212",
+    "anomalies": [],
+    "created_at": "2025-08-26T11:32:38.482212",
+    "updated_at": "",
+    "anomaly_count": 0,
+    "has_high_severity_anomalies": false
+  },
+  {
+    "id": "SH0017",
+    "status": "delivered",
+    "origin": "Columbus, OH",
+    "destination": "Dallas, TX",
+    "cargo": {},
+    "driver_id": "D006",
+    "vehicle_id": "V016",
+    "route_points": [],
+    "expected_delivery": "",
+    "actual_delivery": "2025-09-13T11:32:38.482212",
+    "anomalies": [],
+    "created_at": "2025-09-07T11:32:38.482212",
+    "updated_at": "",
+    "anomaly_count": 0,
+    "has_high_severity_anomalies": false
+  },
+  {
+    "id": "SH0018",
+    "status": "delayed",
+    "origin": "Los Angeles, CA",
+    "destination": "Philadelphia, PA",
+    "cargo": {},
+    "driver_id": "D018",
+    "vehicle_id": "V009",
+    "route_points": [],
+    "expected_delivery": "",
+    "actual_delivery": NaN,
+    "anomalies": [
+      {
+        "type": "delay",
+        "description": "Shipment is delayed beyond expected delivery time",
+        "severity": "medium",
+        "timestamp": "",
+        "resolved": false
+      }
+    ],
+    "created_at": "2025-08-21T11:32:38.482212",
+    "updated_at": "",
+    "anomaly_count": 1,
+    "has_high_severity_anomalies": false
+  },
+  {
+    "id": "SH0019",
+    "status": "cancelled",
+    "origin": "Columbus, OH",
+    "destination": "Houston, TX",
+    "cargo": {},
+    "driver_id": "D006",
+    "vehicle_id": "V006",
+    "route_points": [],
+    "expected_delivery": "",
+    "actual_delivery": NaN,
+    "anomalies": [],
+    "created_at": "2025-09-08T11:32:38.482212",
+    "updated_at": "",
+    "anomaly_count": 0,
+    "has_high_severity_anomalies": false
+  },
+  {
+    "id": "SH0020",
+    "status": "delivered",
+    "origin": "Houston, TX",
+    "destination": "Dallas, TX",
+    "cargo": {},
+    "driver_id": "D016",
+    "vehicle_id": "V001",
+    "route_points": [],
+    "expected_delivery": "",
+    "actual_delivery": "2025-09-05T11:32:38.482212",
+    "anomalies": [],
+    "created_at": "2025-08-28T11:32:38.482212",
+    "updated_at": "",
+    "anomaly_count": 0,
+    "has_high_severity_anomalies": false
+  }
+]

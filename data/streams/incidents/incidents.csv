@@ -1,6 +1,54 @@
-id,driver_id,date,severity,description,location
-I1001,D001,2024-09-15,medium,Harsh braking detected on highway,Highway NH-1
-I1002,D002,2024-09-16,low,Late delivery due to traffic congestion,Delhi NCR
-I1003,D003,2024-09-17,high,Speed limit violation on city roads,Mumbai
-I1004,D005,2024-09-18,high,Aggressive driving behavior reported,Bangalore
-I1005,D004,2024-09-19,low,Minor route deviation,Chandigarh
+id,driver_id,date,severity,description,location,reported_by,status,resolution,timestamp
+I0001,D012,2025-08-06T11:02:32.158703,high,Driver exceeded speed limit by 27 mph,"Interstate 80, Chicago, IL",system,reported,Driver received additional training,2025-08-06T11:02:32.158703
+I0002,D007,2025-07-03T11:02:32.158703,medium,Harsh braking incident recorded,"Interstate 10, Houston, TX",customer,resolved,,2025-07-03T11:02:32.158703
+I0003,D018,2025-08-04T11:02:32.158703,medium,Delivery delayed by 9 hours,"Interstate 5, Seattle, WA",manager,investigating,Driver received additional training,2025-08-04T11:02:32.158703
+I0004,D019,2025-08-26T11:02:32.158703,high,Vehicle involved in minor collision,"Route 66, Albuquerque, NM",customer,reported,,2025-08-26T11:02:32.158703
+I0005,D016,2025-08-21T11:02:32.158703,medium,Delivery delayed by 8 hours,"Interstate 90, Boston, MA",driver,reported,Driver received additional training,2025-08-21T11:02:32.158703
+I0006,D014,2025-09-07T11:02:32.158703,low,Harsh braking incident recorded,"Interstate 5, Seattle, WA",customer,investigating,,2025-09-07T11:02:32.158703
+I0007,D016,2025-09-15T11:02:32.158703,medium,Driver exceeded speed limit by 15 mph,"Interstate 90, Boston, MA",customer,investigating,Driver received additional training,2025-09-15T11:02:32.158703
+I0008,D001,2025-07-25T11:02:32.158703,high,Vehicle involved in minor collision,"Interstate 10, Houston, TX",manager,resolved,,2025-07-25T11:02:32.158703
+I0009,D001,2025-07-29T11:02:32.158703,medium,Delivery delayed by 4 hours,"Interstate 90, Boston, MA",customer,investigating,Driver received additional training,2025-07-29T11:02:32.158703
+I0010,D007,2025-07-04T11:02:32.158703,medium,Delivery delayed by 6 hours,"Highway 401, Toronto, ON",system,reported,,2025-07-04T11:02:32.158703
+I0011,D008,2025-09-08T11:02:32.158703,medium,Harsh braking incident recorded,"Interstate 10, Houston, TX",manager,reported,,2025-09-08T11:02:32.158703
+I0012,D015,2025-08-25T11:02:32.158703,medium,Harsh braking incident recorded,"Interstate 95, Miami, FL",system,resolved,Driver received additional training,2025-08-25T11:02:32.158703
+I0013,D001,2025-08-07T11:02:32.158703,medium,Harsh braking incident recorded,"Highway 401, Toronto, ON",system,resolved,Driver received additional training,2025-08-07T11:02:32.158703
+I0014,D013,2025-08-20T11:02:32.158703,medium,Driver deviated from planned route by 25 miles,"Interstate 95, Miami, FL",driver,investigating,Driver received additional training,2025-08-20T11:02:32.158703
+I0015,D020,2025-08-25T11:02:32.158703,low,Harsh braking incident recorded,"Interstate 15, Las Vegas, NV",system,reported,,2025-08-25T11:02:32.158703
+I0016,D001,2025-09-04T11:02:32.158703,low,Delivery delayed by 11 hours,"Interstate 5, Seattle, WA",driver,reported,Driver received additional training,2025-09-04T11:02:32.158703
+I0017,D018,2025-07-23T11:02:32.158703,medium,Driver exceeded speed limit by 28 mph,"Interstate 75, Atlanta, GA",manager,closed,,2025-07-23T11:02:32.158703
+I0018,D007,2025-07-09T11:02:32.158703,medium,Delivery delayed by 7 hours,"Highway 401, Toronto, ON",customer,investigating,Driver received additional training,2025-07-09T11:02:32.158703
+I0019,D008,2025-06-24T11:02:32.158703,high,Driver exceeded speed limit by 30 mph,"Highway 401, Toronto, ON",driver,investigating,Driver received additional training,2025-06-24T11:02:32.158703
+I0020,D016,2025-07-01T11:02:32.158703,high,Vehicle involved in minor collision,"Interstate 5, Seattle, WA",driver,investigating,Driver received additional training,2025-07-01T11:02:32.158703
+I0021,D010,2025-08-26T11:02:32.158703,medium,Driver deviated from planned route by 28 miles,"Interstate 15, Las Vegas, NV",system,resolved,,2025-08-26T11:02:32.158703
+I0022,D004,2025-07-25T11:02:32.158703,high,Driver violated weight limit regulation,"Interstate 90, Boston, MA",driver,resolved,Driver received additional training,2025-07-25T11:02:32.158703
+I0023,D011,2025-08-01T11:02:32.158703,high,Driver deviated from planned route by 36 miles,"Interstate 10, Houston, TX",driver,investigating,Driver received additional training,2025-08-01T11:02:32.158703
+I0024,D012,2025-07-23T11:02:32.158703,medium,Harsh braking incident recorded,"Route 66, Albuquerque, NM",driver,closed,,2025-07-23T11:02:32.158703
+I0025,D012,2025-08-10T11:02:32.158703,medium,Delivery delayed by 11 hours,"Interstate 75, Atlanta, GA",manager,reported,,2025-08-10T11:02:32.158703
+I0026,D015,2025-08-08T11:02:32.158703,medium,Driver violated cargo securing regulation,"Interstate 10, Houston, TX",manager,closed,Driver received additional training,2025-08-08T11:02:32.158703
+I0027,D014,2025-08-28T11:02:32.158703,medium,Harsh braking incident recorded,"Interstate 95, Miami, FL",driver,investigating,,2025-08-28T11:02:32.158703
+I0028,D013,2025-07-11T11:02:32.158703,high,Vehicle involved in major collision,"Interstate 90, Boston, MA",customer,resolved,Driver received additional training,2025-07-11T11:02:32.158703
+I0029,D013,2025-08-02T11:02:32.158703,low,Driver exceeded speed limit by 16 mph,"Interstate 75, Atlanta, GA",driver,closed,Driver received additional training,2025-08-02T11:02:32.158703
+I0030,D013,2025-07-01T11:02:32.158703,high,Driver deviated from planned route by 21 miles,"Interstate 90, Boston, MA",customer,investigating,Driver received additional training,2025-07-01T11:02:32.158703
+I0031,D018,2025-06-22T11:02:32.158703,medium,Driver violated cargo securing regulation,"Interstate 10, Houston, TX",customer,investigating,Driver received additional training,2025-06-22T11:02:32.158703
+I0032,D012,2025-07-16T11:02:32.158703,medium,Vehicle involved in side collision,"Interstate 5, Seattle, WA",manager,closed,,2025-07-16T11:02:32.158703
+I0033,D006,2025-06-26T11:02:32.158703,low,Harsh braking incident recorded,"Highway 101, San Francisco, CA",system,closed,,2025-06-26T11:02:32.158703
+I0034,D007,2025-07-10T11:02:32.158703,high,Vehicle involved in minor collision,"Interstate 5, Seattle, WA",system,closed,Driver received additional training,2025-07-10T11:02:32.158703
+I0035,D010,2025-06-28T11:02:32.158703,medium,Vehicle involved in side collision,"Interstate 90, Boston, MA",manager,closed,Driver received additional training,2025-06-28T11:02:32.158703
+I0036,D009,2025-06-25T11:02:32.158703,high,Driver violated safety regulation,"Route 66, Albuquerque, NM",customer,closed,Driver received additional training,2025-06-25T11:02:32.158703
+I0037,D002,2025-07-22T11:02:32.158703,medium,Driver exceeded speed limit by 20 mph,"Interstate 10, Houston, TX",system,closed,Driver received additional training,2025-07-22T11:02:32.158703
+I0038,D018,2025-08-15T11:02:32.158703,low,Driver deviated from planned route by 35 miles,"Route 66, Albuquerque, NM",driver,investigating,,2025-08-15T11:02:32.158703
+I0039,D015,2025-08-01T11:02:32.158703,low,Delivery delayed by 9 hours,"Interstate 15, Las Vegas, NV",driver,reported,Driver received additional training,2025-08-01T11:02:32.158703
+I0040,D013,2025-07-31T11:02:32.158703,medium,Driver violated safety regulation,"Interstate 5, Seattle, WA",customer,resolved,Driver received additional training,2025-07-31T11:02:32.158703
+I0041,D004,2025-06-22T11:02:32.158703,low,Harsh braking incident recorded,"Highway 401, Toronto, ON",manager,reported,Driver received additional training,2025-06-22T11:02:32.158703
+I0042,D004,2025-07-06T11:02:32.158703,high,Driver violated cargo securing regulation,"Interstate 15, Las Vegas, NV",system,reported,,2025-07-06T11:02:32.158703
+I0043,D008,2025-08-20T11:02:32.158703,high,Driver violated hours of service regulation,"Interstate 75, Atlanta, GA",system,reported,,2025-08-20T11:02:32.158703
+I0044,D001,2025-07-07T11:02:32.158703,medium,Driver violated hours of service regulation,"Interstate 5, Seattle, WA",customer,investigating,Driver received additional training,2025-07-07T11:02:32.158703
+I0045,D012,2025-06-26T11:02:32.158703,medium,Driver deviated from planned route by 44 miles,"Interstate 5, Seattle, WA",customer,investigating,Driver received additional training,2025-06-26T11:02:32.158703
+I0046,D007,2025-07-21T11:02:32.158703,high,Driver deviated from planned route by 8 miles,"Highway 101, San Francisco, CA",manager,closed,,2025-07-21T11:02:32.158703
+I0047,D003,2025-08-25T11:02:32.158703,low,Delivery delayed by 6 hours,"Interstate 15, Las Vegas, NV",system,reported,Driver received additional training,2025-08-25T11:02:32.158703
+I0048,D002,2025-07-26T11:02:32.158703,medium,Delivery delayed by 9 hours,"Interstate 15, Las Vegas, NV",customer,investigating,,2025-07-26T11:02:32.158703
+I0049,D002,2025-07-19T11:02:32.158703,high,Vehicle involved in major collision,"Interstate 75, Atlanta, GA",system,resolved,Driver received additional training,2025-07-19T11:02:32.158703
+I0050,D009,2025-08-23T11:02:32.158703,low,Driver exceeded speed limit by 22 mph,"Interstate 75, Atlanta, GA",customer,resolved,Driver received additional training,2025-08-23T11:02:32.158703
+I0051,D013,2025-09-20T11:02:32.181538,medium,Driver exceeded speed limit by 9 mph,"Highway 101, San Francisco, CA",manager,reported,,2025-09-20T11:02:32.181538
+I0052,D004,2025-09-20T11:02:33.228327,high,Significant route deviation detected,"Interstate 95, Miami, FL",manager,reported,,2025-09-20T11:02:33.228327
+I0053,D005,2025-09-20T11:02:34.261155,low,Brief unscheduled stop detected,"Interstate 10, Houston, TX",manager,reported,,2025-09-20T11:02:34.261155
