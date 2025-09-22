@@ -178,6 +178,7 @@ Ask questions like:
 ### 📁 Project Structure
 ```
 intelliflow-logistics-ai/
+<<<<<<< HEAD
 ├── 🚀 backend/                          # Core application logic
 │   ├── api/
 │   │   ├── __init__.py
@@ -286,6 +287,68 @@ intelliflow-logistics-ai/
 - **`infrastructure/`**: Container orchestration and deployment configurations
 - **Virtual Environments**: Separate environments for standard operations and Pathway streaming
 - **Batch Files**: Windows-specific startup scripts for easy development
+=======
+├── 🚀 backend/                          # Core application logic (24 Python files)
+│   ├── api/
+│   │   ├── main.py                     # FastAPI application entry point
+│   │   └── routers/                    # API route handlers
+│   │       ├── ai_query.py             # AI copilot endpoints
+│   │       ├── alerts.py               # Alert management
+│   │       ├── drivers.py              # Driver operations
+│   │       └── incidents.py            # Incident tracking
+│   ├── analytics/
+│   │   └── shipment_anomaly_detector.py # Core anomaly detection system
+│   ├── pathway/                        # Real-time streaming pipelines
+│   │   ├── main_pipeline.py            # Main data processing pipeline
+│   │   ├── connectors/                 # Data input connectors
+│   │   └── processors/                 # Stream processing logic
+│   ├── pipelines/
+│   │   └── shipment_pipeline.py        # Shipment processing pipeline
+│   └── rag/
+│       └── logistics_rag_pipeline.py   # RAG system implementation
+├── 🎨 frontend/                         # Streamlit dashboard (16 Python files)
+│   ├── dashboard.py                    # Main dashboard application
+│   ├── components/                     # Reusable UI components
+│   │   ├── ai_chat.py                  # AI chat interface
+│   │   ├── alerts.py                   # Alert displays
+│   │   ├── charts.py                   # Data visualizations
+│   │   ├── metrics_cards.py            # KPI cards
+│   │   └── tables.py                   # Data tables
+│   ├── pages/                          # Multi-page navigation
+│   │   ├── analytics.py                # Analytics page
+│   │   ├── compliance.py               # Compliance dashboard
+│   │   ├── drivers.py                  # Driver management
+│   │   └── shipments.py                # Shipment tracking
+│   └── utils/                          # Frontend utilities
+├── 📊 data/                            # Data management
+│   ├── data_validator.py               # Data validation utilities
+│   ├── enterprise_generator.py         # Enterprise data generation
+│   ├── streams/                        # Live data input directory
+│   ├── processed/                      # Output data storage
+│   └── schemas/                        # Data structure definitions
+├── ⚙️ config/                          # Configuration management
+│   ├── settings.py                     # Main settings
+│   ├── development.py                  # Dev environment config
+│   ├── production.py                   # Production config
+│   └── docker.py                       # Docker configuration
+├── 📜 scripts/                         # Utility & demo scripts
+│   ├── generate_data.py                # Sample data generation
+│   ├── demo_shipment_anomalies.py      # Demo anomaly detection
+│   └── health_check.py                 # System health monitoring
+├── 🧪 tests/                           # Comprehensive test suite
+│   ├── unit/                           # Unit tests
+│   ├── integration/                    # Integration tests
+│   └── load/                           # Performance tests
+├── 🏗️ infrastructure/                  # Deployment configurations
+│   ├── docker/                         # Docker containers
+│   └── kubernetes/                     # K8s deployment files
+├── 📖 docs/                            # Documentation
+├── 🛠️ utils/                           # Project utilities
+│   └── data_generator.py               # Data generation helpers
+├── 📄 README.md                        # Project documentation
+├── 📄 requirements.txt                 # Python dependencies
+└── 📄 docker-compose.yml               # Multi-container setup
+>>>>>>> b76fa53c752c7053862d8d5c2dcb51b383aece3f
 ```
 
 ### 🔧 Configuration
