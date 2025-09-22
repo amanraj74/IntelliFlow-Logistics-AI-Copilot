@@ -81,7 +81,7 @@ if [ ! -f ".env" ]; then
 fi
 
 # Setup Streamlit config
-echo 'API_BASE = "http://localhost:8000"' > .streamlit/secrets.toml
+echo 'API_BASE = "http://localhost:9000"' > .streamlit/secrets.toml
 
 # Create sample data if not exists
 echo "📝 Creating sample data..."
@@ -120,8 +120,8 @@ echo "   Terminal 2: streamlit run frontend/dashboard.py"
 echo ""
 echo "🌐 Access URLs:"
 echo "   Dashboard: http://localhost:8501"
-echo "   API Docs:  http://localhost:8000/docs"
-echo "   Health:    http://localhost:8000/health"
+echo "   API Docs:  http://localhost:9000/docs"
+echo "   Health:    http://localhost:9000/health"
 echo ""
 
 # Ask if user wants to start the services
@@ -140,7 +140,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     
     # Test API
     echo "🔍 Testing API connection..."
-    if curl -s http://localhost:8000/health > /dev/null; then
+    if curl -s http://localhost:9000/health > /dev/null; then
         echo "✅ API is running!"
     else
         echo "⚠️  API might still be starting..."

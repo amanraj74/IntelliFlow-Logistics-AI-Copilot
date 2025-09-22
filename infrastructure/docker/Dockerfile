@@ -1,32 +1,37 @@
-FROM python:3.8-slim
+FROM python:3.10-slim
 
 WORKDIR /app
 
-# Install system dependencies
+# Install system dependencies needed for Pathway + ML libs
 RUN apt-get update && apt-get install -y \
     build-essential \
+    curl \
+    git \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements first to leverage Docker cache
-COPY requirements.txt .
-COPY requirements-dev.txt .
+# Upgrade pip
+RUN pip install --upgrade pip
 
-# Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt -r requirements-dev.txt
+# Copy Pathway requirements
+COPY requirements-pathway.txt .
 
-# Copy the rest of the application
+# Install dependencies (Pathway + FastAPI + Streamlit + ML)
+RUN pip install --no-cache-dir -r requirements-pathway.txt
+
+
+# Copy the full application
 COPY . .
 
 # Create necessary directories
 RUN mkdir -p data/streams data/output .streamlit
 
-# Set up Streamlit config
-RUN echo 'API_BASE = "http://backend:8000"' > .streamlit/secrets.toml
+# Streamlit config
+RUN echo 'API_BASE = "http://backend:9000"' > .streamlit/secrets.toml
 
-# Expose ports for FastAPI and Streamlit
+# Expose ports
 EXPOSE 8000 8501
 
-# Start both services using a shell script
+# Start services
 COPY scripts/start.sh .
 RUN chmod +x start.sh
 

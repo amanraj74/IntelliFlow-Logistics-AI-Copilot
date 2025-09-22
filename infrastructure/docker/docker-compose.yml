@@ -6,7 +6,7 @@ services:
       context: ../..
       dockerfile: infrastructure/docker/Dockerfile
     ports:
-      - "8000:8000"
+      - "9000:8000"   # Host:9000 -> Container:8000
     volumes:
       - ../../data:/app/data
       - ../../cache:/app/cache
@@ -46,15 +46,6 @@ services:
     networks:
       - intelliflow
     restart: unless-stopped
-
-  # Optional: Redis for caching (uncomment if needed)
-  # redis:
-  #   image: redis:7-alpine
-  #   ports:
-  #     - "6379:6379"
-  #   networks:
-  #     - intelliflow
-  #   restart: unless-stopped
 
 networks:
   intelliflow:

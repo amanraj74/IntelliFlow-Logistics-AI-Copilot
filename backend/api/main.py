@@ -2,7 +2,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 
-from backend.api.routers import drivers, incidents, alerts, ai_query
+from backend.api.routers import drivers, incidents, alerts
+from backend.api.routers import ai_query_pathway as ai_query
 
 
 def create_app() -> FastAPI:

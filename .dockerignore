@@ -1,8 +1,10 @@
-# Python virtual environment
-intellliflow_env/
-intellliflow_env
+# Ignore Python virtual environments
+intelliflow_env/
+venv/
+.venv/
+pathway_env/
 
-# Python cache files
+# Ignore Python cache
 __pycache__/
 *.py[cod]
 *$py.class
@@ -22,32 +24,28 @@ nosetests.xml
 coverage.xml
 *.cover
 
-# Jupyter Notebook
+# Jupyter Notebook checkpoints
 .ipynb_checkpoints
 
 # Environment variables
 .env
+*.env
 
-# IDE specific files
+# IDE/editor specific
 .idea/
 .vscode/
 *.swp
 *.swo
 
-
-# Ignore virtual environment
-intelliflow_env/
-venv/
-.venv/
-
-# Ignore other junk
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.db
-*.sqlite3
+# Logs and databases
 *.log
+*.sqlite3
+*.db
+
+# Git
 .git
 .gitignore
+
+# Mac / Windows junk
 .DS_Store
+Thumbs.db

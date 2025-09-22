@@ -2,22 +2,14 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-# Copy requirements first for better caching
+# Copy requirements first
 COPY requirements.txt .
+
+# Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the application
+# Copy the app source
 COPY . .
 
-# Create necessary directories
-RUN mkdir -p .streamlit data/streams/drivers
-
-# Create secrets.toml file with the backend service name
-RUN mkdir -p .streamlit && \
-    echo 'API_BASE = "http://backend:8000"' > .streamlit/secrets.toml
-
-# Expose port for Streamlit
-EXPOSE 8501
-
-# Command to run the frontend
-CMD ["streamlit", "run", "frontend/dashboard.py", "--server.port=8501", "--server.address=0.0.0.0"]
+# Run Streamlit frontend
+CMD ["streamlit", "run", "frontend/dashboard.py", "--server.port=8502", "--server.address=0.0.0.0"]

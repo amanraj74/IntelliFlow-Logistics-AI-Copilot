@@ -1,0 +1,6 @@
+﻿id,name,license_number,risk_score,experience_years,created_at,status
+D001,Aman Singh,DL12-3456,0.25,5,2025-09-20T17:17:00,active
+D002,Priya Verma,DL34-7890,0.45,3,2025-09-20T17:17:00,active
+D003,Rajesh Kumar,DL56-1234,0.85,2,2025-09-20T17:17:00,active
+D004,Alert Driver,DL99-DANGER,0.95,1,2025-09-20T17:18:00,active
+D005,Emergency Case,DL88-URGENT,0.78,1,2025-09-20T17:18:00,active

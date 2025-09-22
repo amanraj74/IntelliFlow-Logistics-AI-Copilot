@@ -1,26 +1,40 @@
-version: '3'
-
 services:
   backend:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: backend
     ports:
       - "8000:8000"
     volumes:
-      - ./data:/app/data
-    environment:
-      - ENVIRONMENT=production
-    restart: unless-stopped
+      - .:/app
+    depends_on:
+      - db
 
   frontend:
     build:
       context: .
       dockerfile: Dockerfile.frontend
+    container_name: frontend
     ports:
-      - "8501:8501"
+      - "8502:8502"
     volumes:
-      - ./data:/app/data
-    environment:
-      - API_BASE=http://backend:8000
+      - .:/app
     depends_on:
       - backend
-    restart: unless-stopped
+
+  db:
+    image: postgres:14
+    container_name: db
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: intelliflow
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:

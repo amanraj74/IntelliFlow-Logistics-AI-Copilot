@@ -71,8 +71,8 @@ echo.
 echo Services started successfully!
 echo.
 echo - Frontend Dashboard: http://localhost:8501
-echo - Backend API: http://localhost:8000
-echo - API Documentation: http://localhost:8000/docs
+echo - Backend API: http://localhost:9000
+echo - API Documentation: http://localhost:9000/docs
 echo.
 echo Press any key to exit this script (services will continue running)...
 pause >nul

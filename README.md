@@ -123,7 +123,7 @@ pip install -r requirements.txt
 ```bash
 cp .env.example .env
 mkdir -p .streamlit
-echo "API_BASE = 'http://localhost:8000'" > .streamlit/secrets.toml
+echo "API_BASE = 'http://localhost:9000'" > .streamlit/secrets.toml
 ```
 
 ### 🏃‍♂️ Running the Application
@@ -245,7 +245,7 @@ intelliflow-logistics-ai/
 #### Environment Variables
 ```bash
 # API Configuration
-API_PORT=8000
+API_PORT=9000
 DEBUG=True
 LOG_LEVEL=INFO
 

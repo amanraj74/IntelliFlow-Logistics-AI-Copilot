@@ -1,0 +1,6 @@
+{"id": "INC0001", "driver_id": "D005", "description": "Speed limit violation", "severity": "high", "date": "2025-09-17T21:29:43.583652", "location": "Lucknow", "resolved": true, "resolution_notes": ""}
+{"id": "INC0002", "driver_id": "D001", "description": "Late delivery", "severity": "high", "date": "2025-09-15T21:29:43.583659", "location": "Kolkata", "resolved": true, "resolution_notes": "Investigation completed"}
+{"id": "INC0003", "driver_id": "D004", "description": "Speed limit violation", "severity": "low", "date": "2025-09-15T21:29:43.583664", "location": "Pune", "resolved": false, "resolution_notes": "Investigation completed"}
+{"id": "INC0004", "driver_id": "D001", "description": "Route deviation", "severity": "high", "date": "2025-09-18T21:29:43.583670", "location": "Mumbai", "resolved": true, "resolution_notes": ""}
+{"id": "INC0005", "driver_id": "D005", "description": "Late delivery", "severity": "high", "date": "2025-09-19T21:29:43.583675", "location": "Kolkata", "resolved": false, "resolution_notes": "Investigation completed"}
+{"id": "INC0006", "driver_id": "D005", "description": "Fuel efficiency concern", "severity": "high", "date": "2025-09-15T21:29:43.583681", "location": "Kolkata", "resolved": true, "resolution_notes": "Investigation completed"}

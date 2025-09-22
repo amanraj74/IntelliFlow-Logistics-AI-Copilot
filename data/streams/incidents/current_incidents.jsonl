@@ -1,0 +1,2 @@
+{"id": "INC001", "driver_id": "DRV-001", "description": "Speed violation detected", "severity": "high", "date": "2025-09-21T12:33:51.269390"}
+{"id": "INC002", "driver_id": "DRV-002", "description": "Late delivery reported", "severity": "medium", "date": "2025-09-21T12:33:51.269390"}
