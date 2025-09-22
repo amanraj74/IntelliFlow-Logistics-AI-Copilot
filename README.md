@@ -10,7 +10,7 @@
 
 **🏆 Real-time Logistics Intelligence System with AI-Powered Insights**
 
-*Built for the Pathway X Iota Cluster IIT Ropar Gen AI Hackathon 2024*
+*Built for the Pathway X Iota Cluster IIT Ropar Gen AI Hackathon 2025*
 
 **[🚀 Quick Start](#-quick-start) • [🎯 Key Features](#-key-features) • [📖 Documentation](#-documentation) • [🎥 Demo](#-demo) • [🏆 Hackathon](#-hackathon-achievements)**
 
