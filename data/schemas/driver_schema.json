@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Driver Schema",
+  "description": "Schema for driver data in the logistics system",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the driver",
+      "pattern": "^D\\d{3}$"
+    },
+    "name": {
+      "type": "string",
+      "description": "Full name of the driver",
+      "minLength": 3,
+      "maxLength": 100
+    },
+    "license_number": {
+      "type": "string",
+      "description": "Driver's license number",
+      "pattern": "^[A-Z]{2}\\d{2}-\\d{4}$"
+    },
+    "risk_score": {
+      "type": "number",
+      "description": "Risk assessment score for the driver (0.0 to 1.0)",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "vehicle_id": {
+      "type": "string",
+      "description": "ID of the vehicle assigned to the driver"
+    },
+    "status": {
+      "type": "string",
+      "description": "Current status of the driver",
+      "enum": ["active", "inactive", "on_leave", "training"]
+    },
+    "last_updated": {
+      "type": "string",
+      "description": "Timestamp of the last update",
+      "format": "date-time"
+    }
+  },
+  "required": ["id", "name", "license_number", "risk_score"],
+  "additionalProperties": false
+}

@@ -1,0 +1,4 @@
+id,driver_id,date,severity,description,location 
+I1001,D001,2024-09-15,medium,Harsh braking detected,Highway NH-1 
+I1002,D002,2024-09-16,low,Late delivery due to traffic,Delhi NCR 
+I1003,D003,2024-09-17,high,Speed limit violation,Mumbai 

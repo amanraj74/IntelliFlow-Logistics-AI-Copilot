@@ -1,0 +1,1 @@
+{"id": "SHP9999", "driver_id": "D999", "status": "delayed", "origin": "Delhi", "destination": "Mumbai", "cargo_type": "High Value Electronics", "cargo_weight": 2000, "cargo_value": 750000, "created_at": "2025-09-20T19:29:53.612980", "expected_delivery": "2025-09-21T03:29:53.612995", "priority": "high"}

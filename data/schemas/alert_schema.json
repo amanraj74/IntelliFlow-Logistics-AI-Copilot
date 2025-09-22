@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Alert Schema",
+  "description": "Schema for alert data in the logistics system",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the alert",
+      "pattern": "^A\\d{3}$"
+    },
+    "type": {
+      "type": "string",
+      "description": "Type of alert",
+      "enum": ["safety", "compliance", "operational", "system"]
+    },
+    "message": {
+      "type": "string",
+      "description": "Alert message content",
+      "minLength": 5,
+      "maxLength": 500
+    },
+    "priority": {
+      "type": "string",
+      "description": "Priority level of the alert",
+      "enum": ["low", "medium", "high", "critical"]
+    },
+    "source": {
+      "type": "string",
+      "description": "Source of the alert (system, user, sensor)"
+    },
+    "related_entity_id": {
+      "type": "string",
+      "description": "ID of the related entity (driver, vehicle, shipment)"
+    },
+    "related_entity_type": {
+      "type": "string",
+      "description": "Type of the related entity",
+      "enum": ["driver", "vehicle", "shipment", "invoice"]
+    },
+    "timestamp": {
+      "type": "string",
+      "description": "Timestamp when the alert was generated",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "description": "Current status of the alert",
+      "enum": ["active", "acknowledged", "resolved", "false_alarm"]
+    },
+    "action_required": {
+      "type": "boolean",
+      "description": "Whether the alert requires action"
+    }
+  },
+  "required": ["id", "type", "message", "priority"],
+  "additionalProperties": false
+}

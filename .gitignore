@@ -1,0 +1,9 @@
+﻿pathway_env/
+intelliflow_env/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+*.log

@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Incident Schema",
+  "description": "Schema for incident data in the logistics system",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the incident",
+      "pattern": "^I\\d{4}$"
+    },
+    "driver_id": {
+      "type": "string",
+      "description": "ID of the driver involved in the incident",
+      "pattern": "^D\\d{3}$"
+    },
+    "date": {
+      "type": "string",
+      "description": "Date when the incident occurred",
+      "format": "date"
+    },
+    "severity": {
+      "type": "string",
+      "description": "Severity level of the incident",
+      "enum": ["low", "medium", "high"]
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the incident",
+      "minLength": 5,
+      "maxLength": 500
+    },
+    "location": {
+      "type": "string",
+      "description": "Location where the incident occurred"
+    },
+    "reported_by": {
+      "type": "string",
+      "description": "Person or system that reported the incident"
+    },
+    "status": {
+      "type": "string",
+      "description": "Current status of the incident",
+      "enum": ["reported", "investigating", "resolved", "closed"]
+    },
+    "resolution": {
+      "type": "string",
+      "description": "Resolution details for the incident"
+    },
+    "timestamp": {
+      "type": "string",
+      "description": "Timestamp when the incident was recorded",
+      "format": "date-time"
+    }
+  },
+  "required": ["id", "driver_id", "date", "severity", "description", "location"],
+  "additionalProperties": false
+}

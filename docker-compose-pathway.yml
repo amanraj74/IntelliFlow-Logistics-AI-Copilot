@@ -1,0 +1,12 @@
+services:
+  pathway:
+    build:
+      context: .
+      dockerfile: Dockerfile.pathway
+    container_name: pathway
+    ports:
+      - "8503:8503"
+    volumes:
+      - .:/app
+    depends_on:
+      - backend
