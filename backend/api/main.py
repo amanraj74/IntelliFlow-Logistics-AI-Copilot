@@ -2,8 +2,11 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 
-from backend.api.routers import drivers, incidents, alerts
+from backend.api.routers import drivers, incidents, alerts , shipments
 from backend.api.routers import ai_query_pathway as ai_query
+from backend.api.routers import shipments
+
+
 
 
 def create_app() -> FastAPI:
@@ -25,6 +28,8 @@ def create_app() -> FastAPI:
     app.include_router(incidents.router, prefix="/incidents", tags=["incidents"])
     app.include_router(alerts.router, prefix="/alerts", tags=["alerts"])
     app.include_router(ai_query.router, prefix="/ai", tags=["ai"])
+    # Then include the router
+    app.include_router(shipments.router, prefix="/api/shipments", tags=["shipments"])
 
     @app.get("/")
     def root():
