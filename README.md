@@ -17,7 +17,7 @@
 </div>
 
 ---
-Team Name - DeepLearners (SOLO)
+Team Name - DeepLearners 
 
 
 ## 🌟 Project Overview
